@@ -4,5 +4,8 @@
     <string name="app_name">dEXIF</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="selector_prompt">Touch the box to select an image</string>
+    <string name="picture_picker_button_text">Select Picture</string>
+    <string name="picture_submit_button_text">OK</string>
 
 </resources>

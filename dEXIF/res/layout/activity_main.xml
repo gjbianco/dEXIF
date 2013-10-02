@@ -9,8 +9,34 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/selector_prompt" />
+
+    <ImageButton
+        android:id="@+id/image_display_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:src="@android:drawable/btn_star" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/image_selector_main"
+        android:layout_alignBottom="@+id/image_selector_main"
+        android:layout_alignLeft="@+id/image_display_main"
+        android:text="@string/picture_submit_button_text" />
+
+    <Button
+        android:id="@+id/image_selector_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_display_main"
+        android:layout_toRightOf="@+id/button2"
+        android:text="@string/picture_picker_button_text" />
 
 </RelativeLayout>
