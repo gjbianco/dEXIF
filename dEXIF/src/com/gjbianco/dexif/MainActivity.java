@@ -64,8 +64,6 @@ public class MainActivity extends Activity {
 					ImageView imgView = (ImageView) findViewById(R.id.image_display_main);
 					
 					imgView.setImageBitmap(selectedImage);
-					
-					// TODO: change image displayed to this bitmap
 				}
 			}
 		}
