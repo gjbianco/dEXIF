@@ -23,25 +23,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		String imagePath = null; // user will select an image
-		// this contains the path to it
-		ImageView imgView;
-		imgView = (ImageView) findViewById(R.id.image_display_main);
-
-		if(imagePath != null) {
-			// from phone path
-			// in this case, should be the userselected file
-			imgView.setImageBitmap(BitmapFactory.decodeFile(imagePath));
-		} else {
-			// from resources
-			// in this case, should be a temporary image or "blank" image
-			//TODO
-			//imgView.setImageResource(R.drawable.blankSelectorImage);
-		}
-
 		final Button selectPictureButton = (Button) findViewById(R.id.image_selector_main);
 		selectPictureButton.setOnClickListener(new View.OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				// on pressing select picture button, launch picture selection
@@ -77,6 +60,10 @@ public class MainActivity extends Activity {
 						e.printStackTrace();
 					}
 					Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+					
+					ImageView imgView = (ImageView) findViewById(R.id.image_display_main);
+					
+					imgView.setImageBitmap(selectedImage);
 					
 					// TODO: change image displayed to this bitmap
 				}
